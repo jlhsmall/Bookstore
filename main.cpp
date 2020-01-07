@@ -366,10 +366,12 @@ int main() {
     memset(nm,0,sizeof nm);
     memset(au,0,sizeof au);
     memset(kw,0,sizeof kw);
+    memset(s_pr,0,sizeof s_pr);
     std::vector<char*>v;
     while(std::cin>>op){
         std::cin.getline(ch,299);
         l=strlen(ch);
+        v.clear();
         for(int i=0;i<l;++i){
             while(i<l&&(ch[i]==' '||ch[i]=='\t'))++i;
             if(i==l)break;
@@ -478,7 +480,6 @@ int main() {
         else{
             std::cout<<"Invalid"<<std::endl;
         }
-        v.clear();
     }
     return 0;
 }

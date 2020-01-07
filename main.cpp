@@ -274,7 +274,7 @@ void show_book(const char* isb,const char* nm,const char* au,const char* kw) {
         return;
     }
     Book x;
-    char ch[42];
+    char ch[42];memset(ch,0,sizeof ch);
     for (int i = 0; i < 97; ++i) {
         std::string file = "Book" + std::to_string(i) + ".txt";
         std::ifstream fin(file);
@@ -360,10 +360,16 @@ int main() {
     //reset();
     init();int l;
     char op[300],ch[300], isb[21], nm[41], au[41], kw[41],s_pr[21];
+    memset(op,0,sizeof op);
+    memset(ch,0,sizeof ch);
+    memset(isb,0,sizeof isb);
+    memset(nm,0,sizeof nm);
+    memset(au,0,sizeof au);
+    memset(kw,0,sizeof kw);
     std::vector<char*>v;
     while(std::cin>>op){
         std::cin.getline(ch,299);
-        v.clear();l=strlen(ch);
+        l=strlen(ch);
         for(int i=0;i<l;++i){
             while(i<l&&(ch[i]==' '||ch[i]=='\t'))++i;
             if(i==l)break;
@@ -472,6 +478,7 @@ int main() {
         else{
             std::cout<<"Invalid"<<std::endl;
         }
+        v.clear();
     }
     return 0;
 }

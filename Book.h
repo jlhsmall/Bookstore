@@ -28,6 +28,10 @@ public:
 
     Book(const char *isb = "", const char *nm = "", const char *au = "", const char *kw = "",
          const double pr = 0.0, const int quan = 0) : price(pr), quantity(quan) {
+        memset(isbn,0,sizeof isbn);
+        memset(name,0,sizeof name);
+        memset(author,0,sizeof author);
+        memset(keyword,0,sizeof keyword);
         strcpy(isbn, isb);
         strcpy(name, nm);
         strcpy(author, au);

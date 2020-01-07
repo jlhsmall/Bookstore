@@ -1,7 +1,4 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/jlhsmall/CLionProjects/Bookstore
-CMake Error at CMakeLists.txt:8:
-  Parse error.  Function missing ending ")".  End of file reached.
-
-
--- Configuring incomplete, errors occurred!
-See also "/mnt/c/Users/jlhsmall/CLionProjects/Bookstore/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/jlhsmall/CLionProjects/Bookstore/cmake-build-debug

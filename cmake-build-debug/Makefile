@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Bookstore
+# Target rules for targets named code
 
 # Build rule for target.
-Bookstore: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Bookstore
-.PHONY : Bookstore
+code: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 code
+.PHONY : code
 
 # fast build rule for target.
-Bookstore/fast:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/build
-.PHONY : Bookstore/fast
+code/fast:
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/build
+.PHONY : code/fast
 
 Book.o: Book.cpp.o
 
@@ -129,7 +129,7 @@ Book.o: Book.cpp.o
 
 # target to build an object file
 Book.cpp.o:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/Book.cpp.o
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/Book.cpp.o
 .PHONY : Book.cpp.o
 
 Book.i: Book.cpp.i
@@ -138,7 +138,7 @@ Book.i: Book.cpp.i
 
 # target to preprocess a source file
 Book.cpp.i:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/Book.cpp.i
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/Book.cpp.i
 .PHONY : Book.cpp.i
 
 Book.s: Book.cpp.s
@@ -147,7 +147,7 @@ Book.s: Book.cpp.s
 
 # target to generate assembly for a file
 Book.cpp.s:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/Book.cpp.s
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/Book.cpp.s
 .PHONY : Book.cpp.s
 
 People.o: People.cpp.o
@@ -156,7 +156,7 @@ People.o: People.cpp.o
 
 # target to build an object file
 People.cpp.o:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/People.cpp.o
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/People.cpp.o
 .PHONY : People.cpp.o
 
 People.i: People.cpp.i
@@ -165,7 +165,7 @@ People.i: People.cpp.i
 
 # target to preprocess a source file
 People.cpp.i:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/People.cpp.i
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/People.cpp.i
 .PHONY : People.cpp.i
 
 People.s: People.cpp.s
@@ -174,7 +174,7 @@ People.s: People.cpp.s
 
 # target to generate assembly for a file
 People.cpp.s:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/People.cpp.s
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/People.cpp.s
 .PHONY : People.cpp.s
 
 main.o: main.cpp.o
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Bookstore.dir/build.make CMakeFiles/Bookstore.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -211,7 +211,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Bookstore"
+	@echo "... code"
 	@echo "... edit_cache"
 	@echo "... Book.o"
 	@echo "... Book.i"

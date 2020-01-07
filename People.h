@@ -23,6 +23,9 @@ public:
     const char *getpassword() { return password; }
 
     People(const char *usid = "", const char *pswd = "", const char *nm = "", int tp = 0) : type(tp) {
+        memset(name,0,sizeof name);
+        memset(user_id,0,sizeof user_id);
+        memset(password,0,sizeof password);
         strcpy(name, nm);
         strcpy(user_id, usid);
         strcpy(password, pswd);

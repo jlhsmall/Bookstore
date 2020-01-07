@@ -74,12 +74,14 @@ void su(const char* usid,const char* pswd){
     do{
         fin.read(reinterpret_cast<char*>(&x),sizeof(People));
         if(fin.eof())break;
-        if(!strcmp(x.getuser_id(),usid)&&!strcmp(x.getpassword(),pswd)){
-            cur=x;
+        if(!strcmp(x.getuser_id(),usid)){
+            if(x.gettype()<cur.gettype()||!strcmp(x.getpassword(),pswd)){
+                cur=x;fin.close();return;
+            }
             break;
         }
     }while(1);
-    if(fin.eof())std::cout<<"Invalid"<<std::endl;
+    std::cout<<"Invalid"<<std::endl;
     fin.close();
 }
 void logout(){
@@ -384,8 +386,9 @@ int main() {
             ch[i]='\0';
         }
         if(!strcmp(op,"su")){
-            if(v.size()!=2)std::cout<<"Invalid"<<std::endl;
-            else su(v[0],v[1]);
+            if(v.size()==2)su(v[0],v[1]);
+            else if(v.size()==1)su(v[0],"");
+            else std::cout<<"Invalid"<<std::endl;
         }
         else if(!strcmp(op,"logout")){
             if(v.size())std::cout<<"Invalid"<<std::endl;

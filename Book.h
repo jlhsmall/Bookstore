@@ -27,15 +27,14 @@ public:
     const int getquantity() { return quantity; }
 
     Book(const char *isb = "", const char *nm = "", const char *au = "", const char *kw = "",
-         const double pr = 0.0, const int quan = 0) : price(pr), quantity(quan) {
-        memset(isbn,0,sizeof isbn);
-        memset(name,0,sizeof name);
-        memset(author,0,sizeof author);
-        memset(keyword,0,sizeof keyword);
+         const double pr = 0.0, const int quan = 0) {
+        memset(this,0,sizeof *this);
         strcpy(isbn, isb);
         strcpy(name, nm);
         strcpy(author, au);
         strcpy(keyword, kw);
+        price=pr;
+        quantity=quan;
     }
     Book &operator =(const Book &right) {
         if (this == &right)return *this;
